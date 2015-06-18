@@ -1,6 +1,6 @@
 {
   "name": "pottymouth-client",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "dictionary and slug matching lookups for verbal blunders",
   "main": "pottymouth.js",
   "scripts": {
