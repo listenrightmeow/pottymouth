@@ -65,11 +65,11 @@ WTFPL (http://www.wtfpl.net/txt/copying/)
 
       match = match + query[0].length;
 
-      if (match >= max) break;
+      if (match > max) break;
     };
 
 
-    return match >= max;
+    return match > max;
   }
 
   pottymouth.badwords = {
