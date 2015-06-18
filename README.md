@@ -1,7 +1,7 @@
 pottymouth
 ==========
 
-[![MA! THE MEATLOAF! FUCK!](http://img.youtube.com/vi/http://img.youtube.com/vi/m0NGZd_jBcA/0.jpg/0.jpg)](https://www.youtube.com/watch?v=m0NGZd_jBcA)
+[![FUCK](http://img.youtube.com/vi/http://img.youtube.com/vi/m0NGZd_jBcA/0.jpg/0.jpg)](https://www.youtube.com/watch?v=m0NGZd_jBcA)
 
 
 ####Filter badwords and profanity a little smarter
