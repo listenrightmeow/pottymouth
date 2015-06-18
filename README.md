@@ -63,6 +63,11 @@ pottymouth.validate.regex('b00bies');
 
 #####dictionary
 
+dictionary lookups can be disabled
+```js
+pottymouth.badwords.ignore = true
+```
+
 Will do a quick object lookup for custom badwords.
 Dictionary is an easy way to add word violations without having to write a comprehensive regex.
 
@@ -71,6 +76,11 @@ If loading pottymouth in an AMD environment, define a config path entry with a l
 If loading pottymouth in a Node environment, make sure that pottymouth and badwords remain in the same directory together.
 
 If loading pottymouth in a browser in a non-AMD environment, you will be required to define badmouth with either a url to badwords.json or your can set this class variable to the badwords object itself.
+
+```js
+pottymouth.badwords.set('/bower_components/pottymouth/dist/badwords.json');
+pottymouth.badwords.set({ bad : 'word' });
+```
 
 If badwords contains the word as an object key, true will be returned regardless of the threshold set.
 
