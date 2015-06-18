@@ -20,7 +20,7 @@ WTFPL (http://www.wtfpl.net/txt/copying/)
     pottymouth = {},
     validate = {},
     badwords = !!badwords ? badwords : dictionary(),
-    asdf = [
+    re = [
       '\\b(as{2,})',
       '(p([o|0]{1,})rn)',
       '(pus{2,})',
@@ -67,7 +67,7 @@ WTFPL (http://www.wtfpl.net/txt/copying/)
     };
 
 
-  this.threshold = 0.5;
+  root.threshold = 0.5;
 
   validate.dictionary = function(word) {
     return !!badwords[word]
@@ -75,12 +75,12 @@ WTFPL (http://www.wtfpl.net/txt/copying/)
 
   validate.regex = function(word) {
     var match = 0,
-      max = Math.floor(word.length * root.threshold);
+        max = Math.floor(word.length * root.threshold);
 
-    for (var i = asdf.length - 1; i >= 0; i--) {
+    for (var i = re.length - 1; i >= 0; i--) {
       var length,
-        regex = new RegExp(asdf[i], 'gi'),
-        word = word.replace(/[\W|\s|\_]/g,''),
+        regex = new RegExp(re[i], 'gi'),
+        word = word.replace(/[\s|\_]/g,''),
         query = word.match(regex);
 
       if (!query) continue;
@@ -107,7 +107,7 @@ WTFPL (http://www.wtfpl.net/txt/copying/)
       }
     },
     full : function(word) {
-      this.prefight();
+      this.preflight(word);
 
       if (this.dictionary(word)) {
         return true;
@@ -116,19 +116,19 @@ WTFPL (http://www.wtfpl.net/txt/copying/)
       }
     },
     dictionary : function(word) {
-      this.prefight();
+      this.preflight(word);
 
       return validate.dictionary.call(root, word);
     },
-    preflight : function() {
-      if (!pottymouth.badwords) {
+    preflight : function(word) {
+      if (!badwords) {
         throw new Error('badwords required.');
       } else if (!word) {
         throw new Error('validate requires a word to filter.');
       }
     },
     regex : function(word) {
-      this.prefight();
+      this.preflight(word);
 
       return validate.regex.call(root, word);
     }
