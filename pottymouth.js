@@ -25,7 +25,7 @@ WTFPL (http://www.wtfpl.net/txt/copying/)
         '(p([o|0]{1,})rn)',
         '(pus{2,})',
         '(sh([i|\\W|\\d]+)[t|+])',
-        '((f|ph)[u|c|k|q]+)',
+        '((f|ph)([u|c|k|q]+)([u|c|k|q]+))',
         '(d([i|1]+)ldo)',
         '(f([a|\\@]+)g)',
         '(bu([t|\\W]+))',
