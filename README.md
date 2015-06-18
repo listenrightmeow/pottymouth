@@ -24,6 +24,12 @@ git clone https://github.com/listenrightmeow/pottymouth
 Pottymouth exposes 3 public endpoint-api methods for validation.
 Pottymouth exposes 2 public endpoint-api methods to retrieve and set custom threshold values used in validation calculation.
 
+#####AMD
+
+If loading pottymouth in an AMD environment, [json](https://github.com/millermedeiros/requirejs-plugins) plugin by [millermedeiros](https://github.com/millermedeiros) is required.
+
+Currently, almond is not supported.
+
 #####threshold
 
 Default : 0.5. Float/Integer
