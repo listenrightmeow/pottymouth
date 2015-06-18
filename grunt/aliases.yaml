@@ -2,4 +2,4 @@ default: ['release']
 
 release:
   - 'uglify'
-  - 'minjson'
+  - 'copy'
