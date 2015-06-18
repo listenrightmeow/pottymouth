@@ -8,7 +8,7 @@ pottymouth
 - No dependencies
 - AMD, Node and browser ready
 
-Pottymouth will catch badwords like 'sh!!!t', 'b000000bs', 'phuck' or any variation of words of the sort. Pottymouth will catch nested badwords. Pottymouth tries to be smart to not filter names like 'Cassandra' but names like 'Fatima' unfortunately will be e
+Pottymouth will catch badwords like 'sh!!!t', 'b000000bs', 'phuck' or any variation of words of the sort. Pottymouth will catch nested badwords. Pottymouth tries to be smart to not filter names like 'Cassandra' but names like 'Fatima' unfortunately will be caught in the crossfire.
 
 ####Installation
 
@@ -23,12 +23,6 @@ git clone https://github.com/listenrightmeow/pottymouth
 
 Pottymouth exposes 3 public endpoint-api methods for validation.
 Pottymouth exposes 2 public endpoint-api methods to retrieve and set custom threshold values used in validation calculation.
-
-#####Full
-
-```js
-pottymouth.validate.full('MA! THE MEATLOAF! FUCK!');
-```
 
 #####threshold
 
@@ -63,13 +57,14 @@ pottymouth.validate.regex('b00bies');
 
 #####dictionary
 
-Will do a quick object lookup for custom badwords or an easy way to add word violations without having to write a comprehensive regex.
+Will do a quick object lookup for custom badwords.
+Dictionary is an easy way to add word violations without having to write a comprehensive regex.
 
 If loading pottymouth in an AMD environment, define a config path entry with a location to the badwords.json file. Pottymouth requires badwords before the class is instantiated.
 
 If loading pottymouth in a Node environment, make sure that pottymouth and badwords remain in the same directory together.
 
-If loading pottymouth in a browser in a non-AMD environment, you will be required to define pottymouth.json with either a url to badwords.json or your can set this class variable to the badwords object itself.
+If loading pottymouth in a browser in a non-AMD environment, you will be required to define badmouth with either a url to badwords.json or your can set this class variable to the badwords object itself.
 
 If badwords contains the word as an object key, true will be returned regardless of the threshold set.
 
@@ -81,7 +76,7 @@ pottymouth.validate.dictionary('assmunchies');
 
 Will match global and case-insensitive regex matches against the user input.
 
-User input may potentially have multiple-nested bad words. This method will iterate over an array of pre-defined regex strings and add will add the number of consecutive characters matched to a score. If the score at anypoint exceeds the class threshold, the method will immediately stop propagation and return false.
+User input may potentially have multiple-nested bad words. This method will iterate over an array of pre-defined regex strings and add will add the number of consecutive characters matched to a score. If the score at anypoint exceeds the class threshold, the method will immediately stop propagation and return true.
 
 Default class threshold is 0.5. Threshold will then be used to evaluate user input * threshold.
 
