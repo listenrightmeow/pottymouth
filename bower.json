@@ -1,0 +1,29 @@
+{
+  "name": "pottymouth",
+  "main": "pottymouth.js",
+  "version": "0.0.1",
+  "authors": [
+    "listenrightmeow <mdyer@n9nemedia.net>"
+  ],
+  "description": "dictionary and slug matching verbal blunder lookups",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "badword",
+    "badwords",
+    "bad",
+    "word",
+    "words"
+  ],
+  "license": "WTFPL",
+  "homepage": "https://github.com/listenrightmeow/pottymouth",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
