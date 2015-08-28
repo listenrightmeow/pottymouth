@@ -52,6 +52,15 @@ pottymouth.validate.full('b00bies');
 ```
 
 Dictionary
+
+Want to choose your own dictionary?
+
+```
+grunt --dictionary=URL --filetype=URL.CONTENT.TYPE
+```
+
+Define the direct url to download your dictionary and make sure to define the filetype. Filetype expected is either js or txt.
+
 ```js
 pottymouth.validate.dictionary('b00bies');
 ```

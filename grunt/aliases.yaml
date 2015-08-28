@@ -1,5 +1,4 @@
 default: ['release']
 
-release:
+build:
   - 'uglify'
-  - 'copy'
